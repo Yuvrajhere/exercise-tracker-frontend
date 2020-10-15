@@ -2,6 +2,8 @@ import axios from "axios";
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
+const APIURL = 'https://exercise-tracker2.herokuapp.com';
+
 const Exercise = props => (
   <tr>
     <td>{props.exercise.username}</td>
@@ -31,7 +33,7 @@ export default class ExercisesList extends Component {
 
   componentDidMount() {
     axios
-      .get('http://localhost:5000/exercises/')
+      .get(APIURL+'/exercises/')
       .then(response => {
         this.setState({
           exercises: response.data
@@ -42,7 +44,7 @@ export default class ExercisesList extends Component {
 
   deleteExercise(id) {
     axios
-      .delete(`http://localhost:5000/exercises/${id}`)
+      .delete(APIURL+`/exercises/${id}`)
       .then(response => {
         console.log(response.data);
         this.setState({
