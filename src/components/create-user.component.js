@@ -34,7 +34,9 @@ export default class CreateUser extends Component {
 
     axios
       .post(APIURL+'/users/add', user)
-      .then(res => console.log(res.data))
+      .then(res => {
+        alert(res.data)
+      })
       .catch(err => console.log(err));
 
     this.setState({
