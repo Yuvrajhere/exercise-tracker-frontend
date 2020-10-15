@@ -1,0 +1,3 @@
+https://yoyo-exercise-tracker.netlify.app/create  /create
+https://yoyo-exercise-tracker.netlify.app/user    /user
+https://yoyo-exercise-tracker.netlify.app/edit/:id   /edit/:id
